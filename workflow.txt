@@ -1,0 +1,10 @@
+First, use the SLPAddLookUp to get a file with all SLP addresses you're looking to send to (either all, or ones already holding a specified token)
+
+then use txCreation.py to build out the tx and save in .txn file to send to EC
+ex. python3 SLPSend.py TokenID path/to/.electron-cash/wallets/WalletName /path/to/Electron-Cash-SLP-version-x86_64_blahblah.AppImage > txToSign.txn
+
+read file and get txhex to broadcast. 
+cat txToSign.txn | bash > txHex.txn
+
+filter txHex for just hex values
+
